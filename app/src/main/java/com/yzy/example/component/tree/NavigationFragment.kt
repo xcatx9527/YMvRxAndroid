@@ -1,5 +1,6 @@
 package com.yzy.example.component.tree
 
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,10 +21,9 @@ import com.yzy.example.widget.recyclerview.SpaceItemDecoration
 import kotlinx.android.synthetic.main.layout_comm_title.*
 
 class NavigationFragment : CommFragment<NavigationViewModel, FragmentNavigationBinding>() {
-    private val navigationAdapter: NavigationAdapter by lazy { NavigationAdapter(arrayListOf()) }
+    private val navigationAdapter: NavigationAdapter = NavigationAdapter(arrayListOf())
     override fun initContentView() {
        main_toolbar.title = "导航"
-//        commTitleBack.gone()
         //初始化recyclerView
         recyclerNavigationView.init(LinearLayoutManager(context), navigationAdapter).let {
             it.addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f)))
@@ -35,9 +35,11 @@ class NavigationFragment : CommFragment<NavigationViewModel, FragmentNavigationB
             //触发刷新监听时请求数据
             viewModel.getNavigationData()
         }
+        Log.e("---chushihua---","---")
         viewModel.navigationDataState.observe(viewLifecycleOwner, Observer {
             swipeNavigationRefresh.isRefreshing = false
             if (it.isSuccess) {
+                Log.e("-----1-",it.isSuccess.toString()+"---")
                 navigationAdapter.setNewInstance(it.listData)
             } else {
 //                loadsir.setErrorText(it.errMessage)

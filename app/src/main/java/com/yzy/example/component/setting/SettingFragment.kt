@@ -44,11 +44,11 @@ class SettingFragment : PreferenceFragmentCompat(),
             //转为线性布局
             val linearLayout = it.parent as? LinearLayout
             linearLayout?.run {
-                val commLayoutTitleBarView = LayoutInflater.from(activity).inflate(R.layout.layout_comm_title, null)
+                val commLayoutTitleBarView =
+                    LayoutInflater.from(activity).inflate(R.layout.layout_comm_title, null)
                 commLayoutTitleBarView.main_toolbar?.title = "设置"
-                /*commTitleBack?.click {
-                    nav().navigateUp()
-                }*/
+                commLayoutTitleBarView.main_toolbar.setNavigationIcon(R.drawable.ic_back)
+                commLayoutTitleBarView.main_toolbar.setNavigationOnClickListener { nav().navigateUp() }
                 //添加到第一个
                 addView(commLayoutTitleBarView, 0)
             }
