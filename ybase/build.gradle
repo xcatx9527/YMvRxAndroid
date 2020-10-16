@@ -33,13 +33,10 @@ android {
         sourceCompatibility rootProject.ext.android.javaSourceCompatibility
         targetCompatibility rootProject.ext.android.javaTargetCompatibility
     }
-//    dataBinding {
-//        enabled = true
-//    }
-    buildFeatures{
-        dataBinding = true
-        viewBinding = false
+    dataBinding {
+        enabled = true
     }
+
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 dependencies {

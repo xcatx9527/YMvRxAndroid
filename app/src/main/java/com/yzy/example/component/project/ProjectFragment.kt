@@ -24,8 +24,8 @@ class ProjectFragment : CommFragment<ProjectViewModel, FragmentPorjectBinding>()
     //标题集合
     var mDataList: ArrayList<ClassifyBean> = arrayListOf()
     override fun initContentView() {
-        commTitleText.text = "项目"
-        commTitleBack.gone()
+       main_toolbar.title = "项目"
+//        commTitleBack.gone()
         binding.vm = viewModel
         binding.lifecycleOwner=this
         //初始化viewpager2

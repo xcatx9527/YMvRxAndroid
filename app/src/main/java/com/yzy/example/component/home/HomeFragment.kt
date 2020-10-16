@@ -38,9 +38,8 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
 
     override fun initContentView() {
         binding.vm = viewModel
-        commTitleText.text = "首页"
-        commTitleBack.gone()
-        smRefresh.setEnableRefresh(false)
+        main_toolbar.title = "首页"
+        smRefresh.setEnableRefresh(true)
         smRefresh.setOnRefreshListener {
             viewModel.getBanner(true)
         }

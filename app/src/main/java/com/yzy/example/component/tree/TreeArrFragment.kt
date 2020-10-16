@@ -16,8 +16,8 @@ import kotlinx.android.synthetic.main.layout_comm_title.*
 class TreeArrFragment :CommFragment<NoViewModel,ViewDataBinding>() {
     var titleData = arrayListOf("广场", "每日一问", "体系", "导航")
     override fun initContentView() {
-        commTitleText.text="广场"
-        commTitleBack.gone()
+       main_toolbar.title="广场"
+//        commTitleBack.gone()
         fragments.add(PlazaFragment())
         fragments.add(AskFragment())
         fragments.add(SystemFragment())

@@ -20,11 +20,11 @@ class RegisterFragment : BaseFragment<RegisterViewModel, FragmentRegisterBinding
     override fun initView(savedSate: Bundle?) {
         binding.vm = viewModel
         binding.click = ProxyClick()
-        commTitleText.text="注册"
-        commTitleBack.pressEffectAlpha()
-        commTitleBack.click {
+       main_toolbar.title="注册"
+        //commTitleBack.pressEffectAlpha()
+        /*commTitleBack.click {
             nav().navigateUp()
-        }
+        }*/
         viewModel.loginResult.observe(
             viewLifecycleOwner,
             Observer { resultState ->

@@ -19,10 +19,10 @@ import kotlinx.android.synthetic.main.layout_comm_title.*
 class PlazaFragment  : CommFragment<TreeViewModel, FragmentPlazaBinding>(){
     private val articleAdapter: AriticleAdapter by lazy { AriticleAdapter(arrayListOf(),showTag = true ) }
     override fun initContentView() {
-        commTitleText.text = "广场"
-        commTitleBack.click {
+       main_toolbar.title = "广场"
+       /* commTitleBack.click {
             onBackPressed()
-        }
+        }*/
         //初始化recyclerView
         recyclerPlazaView.init(LinearLayoutManager(context), articleAdapter).let {
             it.addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f)))

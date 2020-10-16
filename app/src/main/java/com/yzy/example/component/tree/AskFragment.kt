@@ -19,10 +19,10 @@ class AskFragment : CommFragment<AskViewModel, FragmentAskBinding>() {
     private val articleAdapter: AriticleAdapter by lazy { AriticleAdapter(arrayListOf(),showTag = true) }
 
     override fun initContentView() {
-        commTitleText.text = "每日一问"
-        commTitleBack.click {
+       main_toolbar.title = "每日一问"
+      /*  commTitleBack.click {
             onBackPressed()
-        }
+        }*/
         //初始化recyclerView
         recyclerAskView.init(LinearLayoutManager(context), articleAdapter).let {
             it.addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f)))

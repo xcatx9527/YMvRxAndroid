@@ -21,8 +21,8 @@ class PublicNumberFragment :CommFragment<PublicNumberViewModel,ViewDataBinding>(
     //标题集合
     private var mDataList: ArrayList<ClassifyBean> = arrayListOf()
     override fun initContentView() {
-        commTitleText.text="公众号"
-        commTitleBack.gone()
+       main_toolbar.title="公众号"
+//        commTitleBack.gone()
         //初始化viewpager2
         viewPager.init(this,fragments)
         //初始化 magic_indicator

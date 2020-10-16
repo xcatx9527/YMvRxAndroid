@@ -22,8 +22,8 @@ import kotlinx.android.synthetic.main.layout_comm_title.*
 class NavigationFragment : CommFragment<NavigationViewModel, FragmentNavigationBinding>() {
     private val navigationAdapter: NavigationAdapter by lazy { NavigationAdapter(arrayListOf()) }
     override fun initContentView() {
-        commTitleText.text = "导航"
-        commTitleBack.gone()
+       main_toolbar.title = "导航"
+//        commTitleBack.gone()
         //初始化recyclerView
         recyclerNavigationView.init(LinearLayoutManager(context), navigationAdapter).let {
             it.addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f)))

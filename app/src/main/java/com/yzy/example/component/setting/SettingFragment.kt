@@ -22,6 +22,7 @@ import com.yzy.example.component.dialog.commAlertDialog
 import com.yzy.example.component.web.WebsiteDetailFragmentArgs
 import com.yzy.example.utils.DataCleanManager
 import com.yzy.example.utils.MMkvUtils
+import kotlinx.android.synthetic.main.layout_comm_title.view.*
 
 /**
  * 描述　: 系统设置
@@ -29,7 +30,6 @@ import com.yzy.example.utils.MMkvUtils
 class SettingFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private var commLayoutTitleBarView: FrameLayout? = null
 
     //这里不能继承BaseFragment了，所以手动获取一下 AppViewModel
 //    val shareViewModel: AppViewModel by lazy { getAppViewModel<AppViewModel>() }
@@ -44,20 +44,13 @@ class SettingFragment : PreferenceFragmentCompat(),
             //转为线性布局
             val linearLayout = it.parent as? LinearLayout
             linearLayout?.run {
-                val toolbarView =
-                    LayoutInflater.from(activity).inflate(R.layout.layout_comm_title, null)
-                commLayoutTitleBarView = toolbarView.findViewById(R.id.commLayoutTitleBarView)
-                val commTitleBack =
-                    commLayoutTitleBarView?.findViewById<ImageView>(R.id.commTitleBack)
-                val commTitleText =
-                    commLayoutTitleBarView?.findViewById<TextView>(R.id.commTitleText)
-                commTitleBack?.click {
+                val commLayoutTitleBarView = LayoutInflater.from(activity).inflate(R.layout.layout_comm_title, null)
+                commLayoutTitleBarView.main_toolbar?.title = "设置"
+                /*commTitleBack?.click {
                     nav().navigateUp()
-                }
-
-                commTitleText?.text = "设置"
+                }*/
                 //添加到第一个
-                addView(toolbarView, 0)
+                addView(commLayoutTitleBarView, 0)
             }
         }
 

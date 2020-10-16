@@ -26,8 +26,8 @@ class SystemFragment  : CommFragment<SystemViewModel, FragmentSystemBinding>(){
         )
     }
     override fun initContentView() {
-        commTitleText.text = "体系"
-        commTitleBack.gone()
+       main_toolbar.title = "体系"
+//        commTitleBack.gone()
         //初始化recyclerView
         recyclerSystemView.init(LinearLayoutManager(context), systemAdapter).let {
             it.addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f)))
