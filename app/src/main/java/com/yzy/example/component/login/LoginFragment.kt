@@ -17,7 +17,8 @@ class LoginFragment : CommFragment<LoginViewModel, FragmentLoginBinding>() {
     override fun initContentView() {
         binding.vm = viewModel
         binding.click = ProxyClick()
-//       main_toolbar.title="登录"
+        viewModel.username.value = "chenyang1"
+        viewModel.password.value = "123456"
         viewModel.loginResult.observe(
             viewLifecycleOwner,
             Observer { resultState ->
@@ -29,19 +30,12 @@ class LoginFragment : CommFragment<LoginViewModel, FragmentLoginBinding>() {
                     nav().navigate(R.id.action_loginFragment_to_mainFragment)
                 }, {
 
-                },{
+                }, {
                     //登录失败
                     ToastUtils.showLong(it.message)
                 })
             })
-        //设置颜色跟主题颜色一致
-//        shareViewModel.appColor.value.let {
-//            SettingUtil.setShapColor(loginSub, it)
-//            loginGoregister.setTextColor(it)
-//            toolbar.setBackgroundColor(it)
-//        }
     }
-
 
     inner class ProxyClick {
 
@@ -71,9 +65,4 @@ class LoginFragment : CommFragment<LoginViewModel, FragmentLoginBinding>() {
             }
 
     }
-
-
-
-
-
 }

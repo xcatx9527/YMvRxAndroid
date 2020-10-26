@@ -40,17 +40,12 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
         binding.vm = viewModel
         main_toolbar.title = "首页"
         smRefresh.setEnableRefresh(true)
+        smRefresh.autoRefresh()
         smRefresh.setOnRefreshListener {
-            viewModel.getBanner(true)
+            viewModel.getData(true)
         }
-        viewModel.loadLocal(true)
         with(rvHomeRecycler) {
             adapter = mAdapter
-            val bannerView = context.inflate(R.layout.item_banner)
-            banner = bannerView.itemBanner
-            banner.mViewPager2?.setPageTransformer(CompositePageTransformer())
-            mAdapter.removeAllHeaderView()
-            mAdapter.addHeaderView(bannerView)
             addItemDecoration(SpaceItemDecoration(0, ConvertUtils.dp2px(8f), false))
             initFloatBtn(floatbtn)
         }
@@ -61,9 +56,7 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
             }
             setOnItemClickListener { adapter, v, position ->
                 val bean: ArticleDataBean = adapter.data[position] as ArticleDataBean
-                Navigation.findNavController(v).navigate(
-                    MainFragmentDirections.actionMainFragmentToWebsiteDetailFragment(ariticleData = bean)
-                )
+//                Navigation.findNavController(v).navigate(MainFragmentDirections.actionMainFragmentToWebsiteDetailFragment(ariticleData = bean))
             }
         }
 
@@ -89,19 +82,7 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
                     loadMore(false)
                 }
             })
-            //监听轮播图请求的数据变化
-            bannerDataState.observe(viewLifecycleOwner, Observer { resultState ->
-                val bannerBean = resultState.listData ?: mutableListOf()
-                if (bannerBean.isNotEmpty()) {
-                    banner.listSize = bannerBean.size
-                    val bannerAdapter =
-                        ViewPagerAdapter(
-                            bannerBean
-                        )
-                    banner.setAdapter(bannerAdapter)
-                    banner.setAutoTurning(3000L)
-                }
-            })
+
         }
     }
 
@@ -111,38 +92,11 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
         else mAdapter.loadMoreModule.loadMoreComplete()
     }
 
-    private class ViewPagerAdapter(var list: MutableList<BannerBean>) :
-        RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
-
-        internal inner class ViewPagerViewHolder(itemView: View) :
-            RecyclerView.ViewHolder(itemView) {
-            var mContainer: ImageView = itemView.findViewById(R.id.itemBannerIV)
-
-        }
-
-        override fun getItemCount(): Int {
-            return if (list.size <= 1) 1 else Integer.MAX_VALUE
-        }
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerViewHolder {
-            return ViewPagerViewHolder(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_banner_child, parent, false)
-            )
-        }
-
-        override fun onBindViewHolder(holder: ViewPagerViewHolder, position: Int) {
-            holder.mContainer.tag = list[position % list.size]
-            holder.mContainer.loadUrl(list[position % list.size].imagePath)
-
-        }
-    }
 
     override fun getLayoutId(): Int = R.layout.fragment_home
 
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        viewModel.bannerDataState.value?.let { viewModel.setValue(it) }
         viewModel.homeDataState.value?.let { viewModel.setHomeListValue(it) }
         super.onViewStateRestored(savedInstanceState)
     }

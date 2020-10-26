@@ -17,7 +17,8 @@ import com.yzy.example.widget.CollectView
  *   @auther : yzy
  *   time   : 2019/11/08
  */
-class HomeListAdapter (data: MutableList<ArticleDataBean>?) : BaseDelegateMultiAdapter<ArticleDataBean, BaseViewHolder>(data),LoadMoreModule {
+class HomeListAdapter(data: MutableList<ArticleDataBean>?) :
+    BaseDelegateMultiAdapter<ArticleDataBean, BaseViewHolder>(data), LoadMoreModule {
     private var mOnCollectViewClickListener: OnCollectViewClickListener? = null
     private val Ariticle = 1//文章类型
     private val Project = 2//项目类型 本来打算不区分文章和项目布局用统一布局的，但是布局完以后发现差异化蛮大的，所以还是分开吧
@@ -89,7 +90,10 @@ class HomeListAdapter (data: MutableList<ArticleDataBean>?) : BaseDelegateMultiA
                     )
                     holder.setText(R.id.item_project_title, title.toHtml())
                     holder.setText(R.id.item_project_content, desc.toHtml())
-                    holder.setText(R.id.item_project_type, "$superChapterName·$chapterName".toHtml())
+                    holder.setText(
+                        R.id.item_project_type,
+                        "$superChapterName·$chapterName".toHtml()
+                    )
                     holder.setText(R.id.item_project_date, niceDate)
                     if (showTag) {
                         //展示标签
@@ -124,10 +128,6 @@ class HomeListAdapter (data: MutableList<ArticleDataBean>?) : BaseDelegateMultiA
         }
 
 
-    }
-
-    fun setOnCollectViewClickListener(onCollectViewClickListener: OnCollectViewClickListener) {
-        mOnCollectViewClickListener = onCollectViewClickListener
     }
 
 

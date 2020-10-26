@@ -17,9 +17,7 @@ import com.yzy.baselibrary.base.BaseActivity
 import com.yzy.baselibrary.extention.click
 import com.yzy.baselibrary.extention.nav
 import com.yzy.example.R
-import com.yzy.example.component.MainFragmentDirections
 import com.yzy.example.component.dialog.commAlertDialog
-import com.yzy.example.component.web.WebsiteDetailFragmentArgs
 import com.yzy.example.utils.DataCleanManager
 import com.yzy.example.utils.MMkvUtils
 import kotlinx.android.synthetic.main.layout_comm_title.view.*

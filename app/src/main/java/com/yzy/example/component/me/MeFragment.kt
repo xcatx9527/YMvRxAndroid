@@ -14,12 +14,6 @@ import kotlinx.android.synthetic.main.fragment_me.*
 
 class MeFragment : CommFragment<MeViewModel, FragmentMeBinding>() {
 
-//    companion object {
-//        fun newInstance(): MeFragment {
-//            return MeFragment()
-//        }
-//    }
-
     override fun initContentView() {
         binding.vm = viewModel
         binding.click = ProxyClick()
