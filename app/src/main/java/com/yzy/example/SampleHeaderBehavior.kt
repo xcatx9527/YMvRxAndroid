@@ -76,7 +76,8 @@ class SampleHeaderBehavior :
             type: Int
     ) {
         super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type)
-        LiveEventBus.get("target",Integer.TYPE).post(dy)
+        var message = arrayOf(dy, child.id)
+        LiveEventBus.get("target", Array<Int>::class.java).post(message)
 
     }
 
@@ -91,7 +92,7 @@ class SampleHeaderBehavior :
             type: Int,
             consumed: IntArray
     ) {
-        LLog.e("onNestedScroll" + target.javaClass + "dx:" + dxConsumed + "dy:" + dyConsumed + " dxUnconsumed:" + dxUnconsumed + "dyUnconsumed:" + dyUnconsumed)
+        LLog.e("onNestedScroll---${child.id}" + target.javaClass + "dx:" + dxConsumed + "dy:" + dyConsumed + " dxUnconsumed:" + dxUnconsumed + "dyUnconsumed:" + dyUnconsumed)
         super.onNestedScroll(
                 coordinatorLayout,
                 child,

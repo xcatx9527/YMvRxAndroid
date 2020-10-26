@@ -34,23 +34,26 @@ class MainFragment : CommFragment<MainViewModel, FragmentMainBinding>() {
     }
 
     override fun initContentView() {
-        LiveEventBus.get("target", Integer.TYPE).observe(viewLifecycleOwner, Observer {
+        LiveEventBus.get("target", Array<Int>::class.java).observe(viewLifecycleOwner, Observer {
             main_bottom_bar.run {
-                if (it > 0) {
-                    if (translationY + it < 400) {
-                        translationY = translationY + it
-                    } else {
-                        translationY = 400f
-                    }
-                } else {
-                    if (translationY + it > 0) {
-                        translationY = translationY + it
-                    } else {
-                        translationY = 0f
-                    }
+                when (it[1]) {
+                    R.id.floatbtn ->
+                        if (it[0] > 0) {
+                            if (translationY + it[0] < 400) {
+                                translationY = translationY + it[0]
+                            } else {
+                                translationY = 400f
+                            }
+                        } else {
+                            if (translationY + it[0] > 0) {
+                                translationY = translationY + it[0]
+                            } else {
+                                translationY = 0f
+                            }
+                        }
                 }
             }
-            LLog.e("target$it")
+            LLog.e("target${it[0]},${it[1]}")
         })
         if (viewModel.loadPosition() == -1) {
             selectFragment(0)

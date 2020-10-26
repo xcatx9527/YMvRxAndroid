@@ -43,7 +43,6 @@
                     app:itemIconTint="@color/main_navigation"
                     app:itemTextColor="@color/main_navigation"
                     app:labelVisibilityMode="unlabeled"
-                    app:layout_behavior="com.yzy.example.SampleHeaderBehavior"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
