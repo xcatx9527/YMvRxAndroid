@@ -49,7 +49,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
             android:visibility="invisible"
             app:elevation="5dp"
             app:fabSize="mini"
-            app:layout_behavior="com.yzy.example.widget.recyclerview.FatScrollAwareFABBehavior" />
+            app:layout_behavior=".SampleHeaderBehavior" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

@@ -5,6 +5,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.blankj.utilcode.util.FragmentUtils
+import com.chenyang.lloglib.LLog
+import com.jeremyliao.liveeventbus.LiveEventBus
 import com.yzy.baselibrary.extention.nav
 import com.yzy.example.R
 import com.yzy.example.component.comm.CommFragment
@@ -32,6 +34,24 @@ class MainFragment : CommFragment<MainViewModel, FragmentMainBinding>() {
     }
 
     override fun initContentView() {
+        LiveEventBus.get("target", Integer.TYPE).observe(viewLifecycleOwner, Observer {
+            main_bottom_bar.run {
+                if (it > 0) {
+                    if (translationY + it < 400) {
+                        translationY = translationY + it
+                    } else {
+                        translationY = 400f
+                    }
+                } else {
+                    if (translationY + it > 0) {
+                        translationY = translationY + it
+                    } else {
+                        translationY = 0f
+                    }
+                }
+            }
+            LLog.e("target$it")
+        })
         if (viewModel.loadPosition() == -1) {
             selectFragment(0)
         } else {

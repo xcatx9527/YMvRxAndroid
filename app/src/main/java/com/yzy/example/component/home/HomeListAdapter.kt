@@ -2,7 +2,6 @@ package com.yzy.example.component.home
 
 import android.text.TextUtils
 import android.widget.ImageView
-import coil.transform.CircleCropTransformation
 import com.chad.library.adapter.base.BaseDelegateMultiAdapter
 import com.chad.library.adapter.base.delegate.BaseMultiTypeDelegate
 import com.chad.library.adapter.base.module.LoadMoreModule
@@ -11,7 +10,6 @@ import com.yzy.example.R
 import com.yzy.example.extention.loadUrl
 import com.yzy.example.extention.toHtml
 import com.yzy.example.repository.bean.ArticleDataBean
-import com.yzy.example.widget.CollectView
 
 /**
  *   @auther : yzy
@@ -19,7 +17,6 @@ import com.yzy.example.widget.CollectView
  */
 class HomeListAdapter(data: MutableList<ArticleDataBean>?) :
     BaseDelegateMultiAdapter<ArticleDataBean, BaseViewHolder>(data), LoadMoreModule {
-    private var mOnCollectViewClickListener: OnCollectViewClickListener? = null
     private val Ariticle = 1//文章类型
     private val Project = 2//项目类型 本来打算不区分文章和项目布局用统一布局的，但是布局完以后发现差异化蛮大的，所以还是分开吧
     private var showTag = false//是否展示标签 tag 一般主页才用的到
@@ -56,7 +53,6 @@ class HomeListAdapter(data: MutableList<ArticleDataBean>?) :
                     holder.setText(R.id.item_home_content, title.toHtml())
                     holder.setText(R.id.item_home_type2, "$superChapterName·$chapterName".toHtml())
                     holder.setText(R.id.item_home_date, niceDate)
-                    holder.getView<CollectView>(R.id.item_home_collect).isChecked = collect
                     if (showTag) {
                         //展示标签
                         holder.setGone(R.id.item_home_new, !fresh)
@@ -74,12 +70,7 @@ class HomeListAdapter(data: MutableList<ArticleDataBean>?) :
                         holder.setGone(R.id.item_home_new, true)
                     }
                 }
-                holder.getView<CollectView>(R.id.item_home_collect)
-                    .setOnCollectViewClickListener(object : CollectView.OnCollectViewClickListener {
-                        override fun onClick(v: CollectView) {
-                            mOnCollectViewClickListener?.onClick(item, v, holder.layoutPosition)
-                        }
-                    })
+
             }
             Project -> {
                 //项目布局的赋值
@@ -111,30 +102,18 @@ class HomeListAdapter(data: MutableList<ArticleDataBean>?) :
                         holder.setGone(R.id.item_project_type1, true)
                         holder.setGone(R.id.item_project_new, true)
                     }
-                    holder.getView<CollectView>(R.id.item_project_collect).isChecked = collect
                     holder.getView<ImageView>(R.id.item_project_imageview).loadUrl(envelopePic)
 //                    view.loadUrl(url,transformations = CircleCropTransformation())
 //                    Glide.with(context.applicationContext).load(envelopePic)
 //                        .transition(DrawableTransitionOptions.withCrossFade(500))
 //                        .into()
                 }
-                holder.getView<CollectView>(R.id.item_project_collect)
-                    .setOnCollectViewClickListener(object : CollectView.OnCollectViewClickListener {
-                        override fun onClick(v: CollectView) {
-                            mOnCollectViewClickListener?.onClick(item, v, holder.layoutPosition)
-                        }
-                    })
+
             }
         }
 
 
     }
-
-
-    interface OnCollectViewClickListener {
-        fun onClick(item: ArticleDataBean, v: CollectView, position: Int)
-    }
-
 
 }
 

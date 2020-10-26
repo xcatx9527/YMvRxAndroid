@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
 
-            app:qmui_backgroundColor="@color/color_fff"
+            app:qmui_backgroundColor="@color/white"
             app:qmui_radius="5dp">
 
             <TextView
@@ -63,7 +63,5 @@
             </LinearLayout>
         </com.yzy.example.widget.RoundLinearLayout>
     </LinearLayout>
-
-
 
 </layout>

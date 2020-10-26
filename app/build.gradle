@@ -125,9 +125,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation project(":ybase")
-//    api 'com.github.bumptech.glide:glide:4.11.0'
-//    api 'com.github.bumptech.glide:okhttp3-integration:4.11.0'
-//    kapt 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.tencent.bugly:crashreport:3.1.9'
     implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
     //https://github.com/airbnb/lottie-android
@@ -139,10 +136,6 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
     //https://github.com/square/leakcanary
 //    implementation 'com.squareup.leakcanary:leakcanary-android:2.2'
-    //FlexboxLayout https://github.com/google/flexbox-layout
-    implementation 'com.google.android:flexbox:2.0.1'
-    //RevealLayout
-    implementation 'com.github.goweii:RevealLayout:1.1.1'
     //防崩溃
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
     //管理界面状态库
@@ -152,11 +145,13 @@ dependencies {
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.afollestad.material-dialogs:color:3.3.0'
-    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.1'
     implementation 'io.coil-kt:coil:0.11.0'
-    implementation("com.google.android.material:material:1.2.1")
+    implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation files('libs/lloglib.aar')
 
 }
 //放在这省的忘

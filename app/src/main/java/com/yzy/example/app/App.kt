@@ -3,7 +3,10 @@ package com.yzy.example.app
 import cat.ereza.customactivityoncrash.activity.DefaultErrorActivity
 import cat.ereza.customactivityoncrash.config.CaocConfig
 import com.jeremyliao.liveeventbus.LiveEventBus
+import com.scwang.smart.refresh.footer.ClassicsFooter
+import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
+import com.scwang.smart.refresh.layout.listener.DefaultRefreshFooterCreator
 import com.yzy.baselibrary.app.BaseApplication
 import com.yzy.baselibrary.http.SSLManager
 import com.yzy.baselibrary.http.interceptor.CacheInterceptor
@@ -14,7 +17,6 @@ import com.yzy.example.http.integration.RequestIntercept
 import com.yzy.example.http.integration.AddCookiesInterceptor
 import com.yzy.example.http.integration.HeaderIntercept
 import com.yzy.example.http.integration.ReceivedCookiesInterceptor
-import com.yzy.example.widget.header.ClassicsHeader
 
 
 class App : BaseApplication() {
@@ -60,14 +62,13 @@ class App : BaseApplication() {
         LiveEventBus
             .config()
             .lifecycleObserverAlwaysActive(true)
-            .autoClear(false)
+            .autoClear(true)
     }
 
     init {
         //设置全局的Header构建器
-        //设置全局的Header构建器
         SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, layout ->
-            layout.setPrimaryColorsId(R.color.white, android.R.color.black)//全局设置主题颜色
+            layout.setPrimaryColorsId(R.color.colorPrimary, R.color.white)//全局设置主题颜色
             ClassicsHeader(context)
         }
     }

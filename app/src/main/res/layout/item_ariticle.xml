@@ -114,13 +114,6 @@
                 android:textSize="13dp"
                 tools:text="分类·项目" />
 
-            <com.yzy.example.widget.CollectView
-                android:id="@+id/item_home_collect"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="8dp" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

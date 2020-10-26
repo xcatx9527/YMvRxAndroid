@@ -10,6 +10,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import com.blankj.utilcode.util.ConvertUtils
+import com.chenyang.lloglib.LLog
+import com.jeremyliao.liveeventbus.LiveEventBus
 import com.yzy.baselibrary.extention.gone
 import com.yzy.baselibrary.extention.inflate
 import com.yzy.example.R
@@ -26,12 +28,13 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_banner.view.*
 import kotlinx.android.synthetic.main.layout_comm_title.*
 import com.yzy.example.widget.recyclerview.SpaceItemDecoration
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
     private val mAdapter by lazy {
         HomeListAdapter(
-            mutableListOf(),
-            true
+                mutableListOf(),
+                true
         )
     }
     private lateinit var banner: CycleViewPager
