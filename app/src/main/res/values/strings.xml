@@ -24,7 +24,6 @@
     <string name="navigation_navigation">导航</string>
 
     <string name="done">确定</string>
-    <string name="cancel">取消</string>
     <string name="theme_color">主题颜色</string>
 
 
@@ -37,4 +36,82 @@
 
     <string name="appbar_scrolling_float_view_behavior" translatable="false">com.yzy.example.widget.recyclerview.FatScrollAwareFABBehavior</string>
     <string name="mine_add">加入我们</string>
+
+    <string name="description">自动优化服务</string>
+    <string name="adb_name">脚本精灵输入法</string>
+    <string name="auto_input">自动登录服务</string>
+    <string name="activity_title">页面标题</string>
+    <string name="record">录制</string>
+    <string name="play">播放</string>
+    <string name="tool">工具</string>
+    <string name="set">设置</string>
+    <string name="sort_detail">请选择要播放的脚本</string>
+    <string name="name_sort">名称排序</string>
+    <string name="time_sort">时间排序</string>
+    <string name="prompt_message">执行客服链接手游交易自动脚本</string>
+    <string name="text_flush_count">执行在线脚本</string>
+    <string name="text_admin_pwd">设置需要保存的对应信息</string>
+    <string name="text_admin">账号</string>
+    <string name="text_pwd">密码</string>
+    <string name="text_brand">手机品牌</string>
+    <string name="text_input_brand">请输入手机品牌</string>
+    <string name="text_input_admin">请输入用户名</string>
+    <string name="text_input_pwd">请输入用户密码</string>
+    <string name="text_input_phone_name">请输入手机标识</string>
+    <string name="text_save">保存</string>
+    <string name="text_init_play">脚本需要从上图界面开始播放</string>
+    <string name="text_play_right_now">立即播放</string>
+    <string name="text_hand_on">我去找找</string>
+    <string name="text_loop">循环</string>
+    <string name="text_loop_count">次</string>
+    <string name="text_quit_tip">再点击一次退出程序</string>
+    <string name="text_to_record">赶快去录制脚本吧!</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="dialog_title">录制已完成，请输入名称</string>
+    <string name="dialog_commit_number">请输入您的编号</string>
+    <string name="dialog_pic_title">截取已完成，请输入名称</string>
+    <string name="dialog_collect_title">采集已完成，请输入名称</string>
+    <string name="dialog_flush_count">有订单未处理完,是否继续?</string>
+    <string name="dialog_reboot_phone">处理该订单需要重启手机!</string>
+    <string name="dialog_recovery_play">是否继续播放?</string>
+    <string name="text_begin_record">开始录制</string>
+    <string name="text_pause_record">暂停录制</string>
+    <string name="text_recovery_record">恢复录制</string>
+    <string name="text_stop_record">录制完成</string>
+    <string name="text_begin_play">开始播放</string>
+    <string name="text_pause_play">暂停播放</string>
+    <string name="text_recovery_play">恢复播放</string>
+    <string name="text_stop_play">播放结束</string>
+    <string name="text_start_exec">开始执行</string>
+    <string name="text_stop_exec">停止执行</string>
+    <string name="large_area">大区服</string>
+    <string name="small_area">小区服</string>
+    <string name="role_level">角色等级</string>
+    <string name="text_chose_features">请选择功能</string>
+    <string name="text_function_applist">应用列表</string>
+    <string name="text_function_pause">暂停</string>
+    <string name="text_function_capture">插入截图动作</string>
+    <string name="text_function_area">暂停并插入选区服</string>
+    <string name="text_function_role">暂停并插入选角色</string>
+    <string name="text_function_platform">暂停并插入登录平台</string>
+    <string name="text_function_restore_pause">恢复录制</string>
+    <string name="text_function_insert_role">插入角色</string>
+    <string name="text_function_insert_area">插入区服</string>
+    <string name="text_phone_name">手机标识</string>
+    <string name="text_image_upload">图片上传</string>
+
+    <string name="text_function_title">寻宝天行</string>
+    <string name="text_choose_game">请选择要录制的游戏</string>
+    <string name="text_choose">请选择</string>
+    <string name="text_collect_done">采集已完成</string>
+    <string name="text_collect_cancel">采集已取消</string>
+    <string name="text_capture_done">取图已完成</string>
+    <string name="text_capture_cancel">取图已取消</string>
+    <string name="text_capture_save_cancel">取图保存已取消</string>
+    <string name="text_alert_connot_loading_game">警告:无法进入到特定的游戏界面!</string>
+
+    <string name="download_success">下载完成</string>
+    <string name="download_progress">正在下载中</string>
+
 </resources>

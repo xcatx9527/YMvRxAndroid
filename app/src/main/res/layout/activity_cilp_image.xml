@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.xile.script.base.ui.view.cutimage.CilpImageLayout
+        android:id="@+id/cilpimage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_dp_40"
+        android:layout_marginTop="@dimen/size_dp_30"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/sure_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/sure_vertical_screen"
+        />
+        <TextView
+            android:id="@+id/line_01"
+            android:layout_width="@dimen/size_dp_1"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/sure_image"
+            android:background="@color/color_ffffff">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/cancel_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/line_01"
+            android:src="@drawable/cancel_vertical_screen"
+        />
+        <TextView
+            android:id="@+id/line_02"
+            android:layout_width="@dimen/size_dp_1"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/cancel_image"
+            android:background="@color/color_ffffff">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/expand_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/line_02"
+
+            android:src="@drawable/boost_vertical_normal"
+        />
+        <TextView
+            android:id="@+id/line_03"
+            android:layout_width="@dimen/size_dp_1"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/expand_image"
+            android:background="@color/color_ffffff">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/shrink_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/line_03"
+            android:src="@drawable/reduce_vertical_normal"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

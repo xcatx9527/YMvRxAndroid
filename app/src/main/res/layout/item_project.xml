@@ -151,7 +151,6 @@
                 android:textColor="@color/colorBlack666"
                 android:textSize="13dp"
                 tools:text="分类·项目" />
-
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

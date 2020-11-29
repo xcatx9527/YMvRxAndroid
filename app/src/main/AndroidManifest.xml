@@ -38,7 +38,48 @@
     <!-- 消息通道保活 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+
     <application
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:supportsRtl="true"
         android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -67,6 +108,105 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
+
+
+        <activity
+            android:name="com.xile.script.base.activity.HomeMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|mcc|mnc|keyboard|locale"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xile.script.permission.HelpActivity" />
+        <activity android:name="com.xile.script.base.activity.PictureWallActivity" />
+        <activity android:name="com.xile.script.base.activity.AppInfoActivity" />
+        <activity android:name="com.xile.script.base.activity.IMEInfoActivity" />
+        <activity
+            android:name="com.xile.script.base.ui.view.cutimage.CutImageActivity"
+            android:screenOrientation="portrait" />
+
+
+        <service
+            android:name="com.xile.script.service.FloatingService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.xile.script.service.AdbIMEService"
+            android:label="@string/adb_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/methods" />
+        </service>
+
+        <service
+            android:name="com.xile.script.service.AndServerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.xile.script.service.CheckRebootService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.xile.script.service.UploadKeychainService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="com.xile.script.receiver.BootReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.xile.script.base.ui.view.floatactivity.FunctionMenuActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/float_activity_style"></activity>
+
+        <activity
+            android:name="com.zhima.proxy.core.ProxyAuthActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ProxyDialog" />
+
+
+        <service
+            android:name="com.zhima.proxy.core.MSProxyService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.zhima.proxy.core.MOProxyService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+
+
+
+        <service android:name="com.xile.script.utils.appupdate.DownloadService" />
+
+        <receiver android:name="com.xile.script.service.CheckRebootService$AlarmReceiver"/>
+
+
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" />

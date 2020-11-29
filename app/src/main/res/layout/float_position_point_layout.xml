@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_position"
+        android:src="@drawable/gesture_shape"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/size_dp_10"
+        android:layout_height="@dimen/size_dp_10"/>
+</FrameLayout>

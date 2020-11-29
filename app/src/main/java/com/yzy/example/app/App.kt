@@ -3,23 +3,25 @@ package com.yzy.example.app
 import cat.ereza.customactivityoncrash.activity.DefaultErrorActivity
 import cat.ereza.customactivityoncrash.config.CaocConfig
 import com.jeremyliao.liveeventbus.LiveEventBus
-import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
-import com.scwang.smart.refresh.layout.listener.DefaultRefreshFooterCreator
+import com.xile.script.base.ScriptApplication
 import com.yzy.baselibrary.app.BaseApplication
 import com.yzy.baselibrary.http.SSLManager
 import com.yzy.baselibrary.http.interceptor.CacheInterceptor
 import com.yzy.baselibrary.http.retrofitConfig
 import com.yzy.example.R
 import com.yzy.example.constants.ApiConstants
-import com.yzy.example.http.integration.RequestIntercept
 import com.yzy.example.http.integration.AddCookiesInterceptor
 import com.yzy.example.http.integration.HeaderIntercept
 import com.yzy.example.http.integration.ReceivedCookiesInterceptor
+import com.yzy.example.http.integration.RequestIntercept
 
 
 class App : BaseApplication() {
+    private var instance: ScriptApplication? = null
+
+
     override fun initInMainThread() {
         initLiveBus()
         retrofitConfig(
@@ -43,7 +45,7 @@ class App : BaseApplication() {
         CaocConfig.Builder.create()
             .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM
             .enabled(true)//是否启用CustomActivityOnCrash崩溃拦截机制 必须启用！不然集成这个库干啥？？？
-            .showErrorDetails(false) //是否必须显示包含错误详细信息的按钮 default: true
+            .showErrorDetails(true) //是否必须显示包含错误详细信息的按钮 default: true
             .showRestartButton(false) //是否必须显示“重新启动应用程序”按钮或“关闭应用程序”按钮default: true
             .logErrorOnRestart(false) //是否必须重新堆栈堆栈跟踪 default: true
             .trackActivities(true) //是否必须跟踪用户访问的活动及其生命周期调用 default: false
@@ -52,6 +54,7 @@ class App : BaseApplication() {
             .errorActivity(DefaultErrorActivity::class.java) //发生错误跳转的activity
             .eventListener(null) //允许你指定事件侦听器，以便在库显示错误活动 default: null
             .apply()
+        ScriptApplication.init(this@App)
     }
 
     override fun baseInitCreate() {
@@ -72,5 +75,6 @@ class App : BaseApplication() {
             ClassicsHeader(context)
         }
     }
+
 }
 

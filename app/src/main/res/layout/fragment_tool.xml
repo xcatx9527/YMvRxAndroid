@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xile.script.base.ui.view.TitleLayout
+        android:id="@+id/tl_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.xile.script.base.ui.view.TitleLayout>
+
+    <ListView
+        android:id="@+id/lv_tool_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:layout_below="@id/tl_title_layout" />
+
+</RelativeLayout>

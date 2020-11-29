@@ -64,5 +64,84 @@
 
 
     <!-- Define your custom dialog theme here extending from base -->
+    <style name="dialog_bocop">
+        <item name="android:windowBackground">@color/color_77000000</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="main_text_343434_14sp">
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_343434</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="main_text_343434_16sp">
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_343434</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="main_text_343434_18sp">
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_343434</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="main_text_333333_16sp">
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="main_text_ffffff_16sp">
+        <item name="android:padding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="location_num_style">
+        <item name="android:rotation">90</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/size_dp_3</item>
+        <item name="android:textSize">@dimen/text_sp_14</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="float_activity_style">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <declare-styleable name="verticaltextview">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="textSize" format="reference|dimension" />
+        <attr name="direction">
+            <enum name="uptodown" value="0" />
+            <enum name="downtoup" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
 
 </resources>

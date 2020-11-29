@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/play_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_dp_48"
+        android:gravity="left|center_vertical"
+        style="@style/main_text_343434_16sp"
+        android:text="@string/prompt_message"
+    />
+</LinearLayout>

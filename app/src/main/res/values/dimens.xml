@@ -1,7 +1,106 @@
 <resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!--uCrop Activity-->
 
-    <!--Crop View-->
+    <!--文本尺寸sp-->
+    <dimen name="text_sp_7">7sp</dimen>
+    <dimen name="text_sp_10">10sp</dimen>
+    <dimen name="text_sp_12">12sp</dimen>
+    <dimen name="text_sp_13">13sp</dimen>
+    <dimen name="text_sp_14">14sp</dimen>
+    <dimen name="text_sp_15">15sp</dimen>
+    <dimen name="text_sp_16">16sp</dimen>
+    <dimen name="text_sp_17">17sp</dimen>
+    <dimen name="text_sp_18">18sp</dimen>
+    <dimen name="text_sp_20">20sp</dimen>
+    <dimen name="text_sp_24">24sp</dimen>
+    <!--控件尺寸dp-->
+    <dimen name="size_dp_line">0.5dp</dimen>
+
+    <dimen name="size_dp_0_5">0.5dp</dimen>
+    <dimen name="size_dp_1">1dp</dimen>
+    <dimen name="size_dp_2">2dp</dimen>
+    <dimen name="size_dp_3">3dp</dimen>
+    <dimen name="size_dp_4">4dp</dimen>
+    <dimen name="size_dp_5">5dp</dimen>
+    <dimen name="size_dp_7">7dp</dimen>
+    <dimen name="size_dp_8">8dp</dimen>
+
+    <dimen name="size_dp_10">10dp</dimen>
+    <dimen name="size_dp_11">11dp</dimen>
+    <dimen name="size_dp_12">12dp</dimen>
+    <dimen name="size_dp_13">13dp</dimen>
+    <dimen name="size_dp_14">14dp</dimen>
+    <dimen name="size_dp_15">15dp</dimen>
+    <dimen name="size_dp_16">16dp</dimen>
+    <dimen name="size_dp_17">17dp</dimen>
+    <dimen name="size_dp_19">19dp</dimen>
+    <dimen name="size_dp_20">20dp</dimen>
+    <dimen name="size_dp_l_20">-20dp</dimen>
+    <dimen name="size_dp_22">22dp</dimen>
+    <dimen name="size_dp_23">23dp</dimen>
+    <dimen name="size_dp_25">25dp</dimen>
+    <dimen name="size_dp_27">27dp</dimen>
+    <dimen name="size_dp_28">28dp</dimen>
+    <dimen name="size_dp_30">30dp</dimen>
+    <dimen name="size_dp_32">32dp</dimen>
+    <dimen name="size_dp_35">35dp</dimen>
+    <dimen name="size_dp_36">36dp</dimen>
+    <dimen name="size_dp_38">38dp</dimen>
+
+    <dimen name="size_dp_40">40dp</dimen>
+    <dimen name="size_dp_44">44dp</dimen>
+    <dimen name="size_dp_45">45dp</dimen>
+    <dimen name="size_dp_46">46dp</dimen>
+    <dimen name="size_dp_47">47dp</dimen>
+    <dimen name="size_dp_47_5">47.5dp</dimen>
+    <dimen name="size_dp_48">48dp</dimen>
+    <dimen name="size_dp_50">50dp</dimen>
+    <dimen name="size_dp_54">54dp</dimen>
+    <dimen name="size_dp_55">55dp</dimen>
+    <dimen name="size_dp_58">58dp</dimen>
+    <dimen name="size_dp_59">59dp</dimen>
+    <dimen name="size_dp_60">60dp</dimen>
+
+
+    <dimen name="size_dp_62">62dp</dimen>
+    <dimen name="size_dp_64">64dp</dimen>
+    <dimen name="size_dp_65">65dp</dimen>
+    <dimen name="size_dp_66">66dp</dimen>
+    <dimen name="size_dp_67">67dp</dimen>
+    <dimen name="size_dp_70">70dp</dimen>
+    <dimen name="size_dp_75">75dp</dimen>
+    <dimen name="size_dp_79">79dp</dimen>
+    <dimen name="size_dp_80">80dp</dimen>
+    <dimen name="size_dp_85">85dp</dimen>
+    <dimen name="size_dp_87">87dp</dimen>
+    <dimen name="size_dp_90">90dp</dimen>
+    <dimen name="size_dp_93">93dp</dimen>
+    <dimen name="size_dp_100">100dp</dimen>
+    <dimen name="size_dp_108">108dp</dimen>
+    <dimen name="size_dp_117">117dp</dimen>
+    <dimen name="size_dp_120">120dp</dimen>
+
+    <dimen name="size_dp_125">125dp</dimen>
+    <dimen name="size_dp_130">130dp</dimen>
+    <dimen name="size_dp_132">132dp</dimen>
+    <dimen name="size_dp_141">141dp</dimen>
+    <dimen name="size_dp_150">150dp</dimen>
+    <dimen name="size_dp_160">160dp</dimen>
+    <dimen name="size_dp_170">170dp</dimen>
+    <dimen name="size_dp_200">200dp</dimen>
+    <dimen name="size_dp_206">206dp</dimen>
+    <dimen name="size_dp_230">230dp</dimen>
+    <dimen name="size_dp_266">266dp</dimen>
+    <dimen name="size_dp_278">278dp</dimen>
+    <dimen name="size_dp_300">300dp</dimen>
+    <dimen name="size_dp_350">350dp</dimen>
+    <dimen name="size_dp_354">354dp</dimen>
+    <dimen name="size_dp_520">520dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
 
 </resources>
