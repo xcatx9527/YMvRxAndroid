@@ -16,12 +16,12 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import com.chenyang.lloglib.LLog;
-import com.xile.script.base.activity.HomeMainActivity;
 import com.xile.script.base.ui.view.floatview.BaseFloatView;
 import com.xile.script.base.ui.view.floatview.RecordFloatView;
 import com.xile.script.imagereact.ScreenConfigBcReceiver;
 import com.xile.script.receiver.ScreenBroadcastReceiver;
 import com.yzy.example.R;
+import com.yzy.example.component.MainActivity;
 
 /**
  * date: 2017/3/13 16:06
@@ -53,7 +53,7 @@ public class FloatingService extends Service {
             notificationManager.createNotificationChannel(notificationChannel);
         }
         Notification notification = null;
-        PendingIntent pi = PendingIntent.getActivity(this, 0, new Intent(this, HomeMainActivity.class), 0);
+        PendingIntent pi = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
         Notification.Builder builder = new Notification.Builder(this);
         //String contentText = "<font color=\"#00BFFF\"><big><strong>☛ I'm running</strong></big></font>";
         String contentText = "嘿...我告诉你一个走路不被绷带绊倒的办法 ➟";

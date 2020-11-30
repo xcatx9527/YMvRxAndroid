@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.xile.script.base.ScriptApplication;
-import com.xile.script.base.activity.HomeMainActivity;
 import com.xile.script.base.ui.promptdialog.PopupDialog;
 import com.xile.script.base.ui.view.cutimage.CutImageActivity;
 import com.xile.script.config.CollectEnum;
@@ -51,6 +50,7 @@ import com.xile.script.utils.script.PlatformUtil;
 import com.xile.script.utils.script.ScriptUtil;
 import com.xile.script.utils.script.SocketUtil;
 import com.yzy.example.R;
+import com.yzy.example.component.MainActivity;
 
 import script.tools.EventUtil;
 import script.tools.config.ScriptConstants;
@@ -337,7 +337,7 @@ public class RecordFloatView extends BaseFloatView implements View.OnTouchListen
                 break;
 
             case R.id.img_back_float:  //返回
-                AppUtil.jumpToHome(mContext, HomeMainActivity.class);
+                AppUtil.jumpToHome(mContext, MainActivity.class);
                 ScriptApplication.getService().execute(() -> CMDUtil.execShell("pkill main_exec"));
                 if (Constants.PLAY_STATE == PlayEnum.START_PLAY || Constants.PLAY_STATE == PlayEnum.PAUSE_PLAY) {
                     BrushOrderHelper.getInstance().closeVPN();
@@ -388,7 +388,7 @@ public class RecordFloatView extends BaseFloatView implements View.OnTouchListen
             Constants.needSave = true;
             img_float_big.setImageDrawable(mContext.getResources().getDrawable(R.drawable.float_record_begin));
             updateMessage(mContext.getResources().getString(R.string.text_stop_record));
-            AppUtil.jumpToHome(mContext, HomeMainActivity.class);
+            AppUtil.jumpToHome(mContext, MainActivity.class);
             ScriptApplication.getService().execute(() -> CMDUtil.execShell("pkill main_exec"));
         }
     }
@@ -416,7 +416,7 @@ public class RecordFloatView extends BaseFloatView implements View.OnTouchListen
         Constants.needSave = true;
         img_float_big.setImageDrawable(mContext.getResources().getDrawable(R.drawable.float_record_begin));
         updateMessage(mContext.getResources().getString(R.string.text_stop_record));
-        AppUtil.jumpToHome(mContext, HomeMainActivity.class);
+        AppUtil.jumpToHome(mContext, MainActivity.class);
         ScriptApplication.getService().execute(() -> CMDUtil.execShell("pkill main_exec"));
     }
 

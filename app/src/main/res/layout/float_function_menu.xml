@@ -33,7 +33,7 @@
 
     </FrameLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcy_features"
         android:background="@android:color/white"
         android:layout_marginTop="@dimen/size_dp_30"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>

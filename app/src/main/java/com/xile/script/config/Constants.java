@@ -3,6 +3,7 @@ package com.xile.script.config;
 
 import android.os.Environment;
 
+import com.xile.script.base.ScriptApplication;
 import com.xile.script.http.helper.brush.bean.BrushOrderInfo;
 import com.xile.script.http.helper.manager.bean.GamesOrderInfo;
 import com.yzy.example.BuildConfig;
@@ -61,8 +62,8 @@ public class Constants {
     public static final String LOCAL_HOOK_FINGER = Environment.getExternalStorageDirectory() + "/LocalInfo/changeFinger.txt";
     public static final String INSTALL_APP_PATH = Environment.getExternalStorageDirectory() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/cache/app";
     public static final String RECORD_FILE_PATH = "/data/data/" + BuildConfig.APPLICATION_ID + "/record/";
-    public static final String SCRIPT_FOLDER_ROOT_PATH = Environment.getExternalStorageDirectory() + "/XileScript";
-    public static final String SCRIPT_FOLDER_GAME_DATA_PATH = Environment.getExternalStorageDirectory() + "/GameData/";
+    public static final String SCRIPT_FOLDER_ROOT_PATH = ScriptApplication.app.getExternalFilesDir("XileScript").getAbsolutePath();
+    public static final String SCRIPT_FOLDER_GAME_DATA_PATH = SCRIPT_FOLDER_ROOT_PATH + "/GameData/";
     public static final String SCRIPT_FOLDER_GAME_KEYCHAIN_PATH = SCRIPT_FOLDER_GAME_DATA_PATH + "keychain/";
     public static final String SCRIPT_FOLDER_GAME_APK_PATH = SCRIPT_FOLDER_GAME_DATA_PATH + "apk/";
     public static final String SCRIPT_FOLDER_GAME_RESOURCE_PATH = SCRIPT_FOLDER_GAME_DATA_PATH + "resource/";
