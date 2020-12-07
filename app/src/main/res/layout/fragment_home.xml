@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<data>
-    <variable
-        name="vm"
-        type="com.yzy.example.repository.model.HomeViewModel" />
-</data>
+    <data>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+        <variable
+            name="vm"
+            type="com.yzy.example.repository.model.HomeViewModel" />
+    </data>
 
-    <include layout="@layout/layout_comm_title" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/windowBackground"
         android:orientation="vertical">
 
-        <com.scwang.smart.refresh.layout.SmartRefreshLayout
-            android:id="@+id/smRefresh"
+        <include layout="@layout/layout_comm_title" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvHomeRecycler"
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/smRefresh"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:overScrollMode="never"
-                android:scrollbars="none"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+                android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="24dp"
-            android:scaleType="center"
-            android:src="@drawable/fab_up"
-            android:visibility="invisible"
-            app:elevation="5dp"
-            app:fabSize="mini"
-            app:layout_behavior=".SampleHeaderBehavior" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="24dp"
+                android:scaleType="center"
+                android:src="@drawable/fab_up"
+                android:visibility="invisible"
+                app:elevation="5dp"
+                app:fabSize="mini"
+                app:layout_behavior=".SampleHeaderBehavior" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
 </layout>
 

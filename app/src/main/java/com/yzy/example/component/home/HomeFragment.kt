@@ -15,7 +15,6 @@ import com.jeremyliao.liveeventbus.LiveEventBus
 import com.yzy.baselibrary.extention.gone
 import com.yzy.baselibrary.extention.inflate
 import com.yzy.example.R
-import com.yzy.example.component.MainFragmentDirections
 import com.yzy.example.component.comm.CommFragment
 import com.yzy.example.databinding.FragmentHomeBinding
 import com.yzy.example.extention.initFloatBtn
@@ -102,5 +101,9 @@ class HomeFragment : CommFragment<HomeViewModel, FragmentHomeBinding>() {
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         viewModel.homeDataState.value?.let { viewModel.setHomeListValue(it) }
         super.onViewStateRestored(savedInstanceState)
+    }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
     }
 }

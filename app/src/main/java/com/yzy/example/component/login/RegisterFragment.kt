@@ -1,6 +1,7 @@
 package com.yzy.example.component.login
 
 import android.os.Bundle
+import android.view.View
 import android.widget.CompoundButton
 import androidx.lifecycle.Observer
 import com.blankj.utilcode.util.ToastUtils
@@ -42,6 +43,10 @@ class RegisterFragment : BaseFragment<RegisterViewModel, FragmentRegisterBinding
                     ToastUtils.showLong(it.errMsg)
                 })
             })
+    }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
     }
 
     inner class ProxyClick {

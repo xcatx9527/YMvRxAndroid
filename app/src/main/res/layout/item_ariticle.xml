@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/item_imgselector"
-                android:textColor="@color/colorBlack666"
+                android:textColor="@color/textColor"
                 android:textSize="13dp"
                 tools:text="有何高见" />
 
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/colorBlack666"
+                android:textColor="@color/textColor"
                 android:textSize="13dp"
                 tools:text="1小时前" />
         </LinearLayout>
@@ -93,7 +93,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             tools:text="这是一个根据JetpackMvvm框架开发玩Android的一个APP"
-            android:textColor="@color/colorBlack333"
+            android:textColor="@color/textDarkColor"
             android:textSize="14dp"
             android:textStyle="bold" />
 
@@ -110,7 +110,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
-                android:textColor="@color/colorBlack666"
+                android:textColor="@color/textColor"
                 android:textSize="13dp"
                 tools:text="分类·项目" />
 

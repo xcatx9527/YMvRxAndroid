@@ -25,7 +25,7 @@ class SplashActivity : BaseActivity(){
         hasFinish = checkReOpenHome()
         if (hasFinish) return
         launch(Dispatchers.Main) {
-            for (i in 5 downTo 1) {
+            for (i in 1 downTo 1) {
                 splashTime.text = String.format("%d", i)
                 delay(1000)
             }

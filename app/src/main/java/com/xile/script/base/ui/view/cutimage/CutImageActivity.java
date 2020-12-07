@@ -6,12 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.android.material.button.MaterialButton;
 import com.xile.script.base.ScriptApplication;
 import com.xile.script.base.activity.BaseActivity;
-import com.xile.script.base.ui.promptdialog.PromptDialog;
 import com.xile.script.base.ui.view.floatview.RecordFloatView;
 import com.xile.script.config.Constants;
 import com.xile.script.utils.BitmapUtil;
@@ -24,13 +23,11 @@ import java.io.File;
  */
 public class CutImageActivity extends BaseActivity  {
     private CilpImageLayout layout;
-    ImageView sure_image;
-    ImageView cancel_image;
+    MaterialButton sure_image;
+    MaterialButton cancel_image;
     ImageView expand_image;
     ImageView shrink_image;
     boolean isNeedRotate=false;
-    PromptDialog dialog;
-    EditText editText;
     Bitmap bitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

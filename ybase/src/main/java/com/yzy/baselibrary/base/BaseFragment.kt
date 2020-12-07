@@ -25,23 +25,24 @@ import java.lang.reflect.ParameterizedType
  *@date 2019/7/15
  *@author: yzy.
  */
-abstract class BaseFragment<VM : BaseViewModel<*>, DB : ViewDataBinding>  : Fragment(),LifecycleObserver,
+abstract class BaseFragment<VM : BaseViewModel<*>, DB : ViewDataBinding> : Fragment(),
+    LifecycleObserver, View.OnClickListener,
     CoroutineScope by MainScope() {
     lateinit var viewModel: VM
     lateinit var binding: DB
 
+    @LayoutRes
+    abstract fun getLayoutId(): Int
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.e("baseFragment","onCreateView=${javaClass.name}")
+        Log.e("baseFragment", "onCreateView=${javaClass.name}")
         binding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false)
         binding.lifecycleOwner = this
         return binding.root
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if (isBack()) {
@@ -63,26 +64,31 @@ abstract class BaseFragment<VM : BaseViewModel<*>, DB : ViewDataBinding>  : Frag
         if (type is ParameterizedType) {
             val tp = type.actualTypeArguments[0]
             val tClass = tp as? Class<VM> ?: BaseViewModel::class.java
-            viewModel = ViewModelProvider(this, SavedStateViewModelFactory(requireActivity().application, this)).get(tClass) as VM
+            viewModel = ViewModelProvider(
+                this,
+                SavedStateViewModelFactory(requireActivity().application, this)
+            ).get(tClass) as VM
         }
     }
 
     /**
      * 是否屏蔽返回键
      */
-    fun onBack(enabled:Boolean,onBackPressed:()->Unit){
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(enabled) {
-            override fun handleOnBackPressed() {
-                onBackPressed.invoke()
-            }
-        })
+    fun onBack(enabled: Boolean, onBackPressed: () -> Unit) {
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(enabled) {
+                override fun handleOnBackPressed() {
+                    onBackPressed.invoke()
+                }
+            })
     }
-    @LayoutRes
-    abstract fun getLayoutId(): Int
+
     /**
      * 初始化
      */
     abstract fun initView(savedSate: Bundle?)
+
     /**
      * 默认状态栏黑色字体图标
      */
@@ -92,12 +98,12 @@ abstract class BaseFragment<VM : BaseViewModel<*>, DB : ViewDataBinding>  : Frag
 
     override fun onDestroyView() {
         cancel()
-        Log.e("baseFragment","onDestroyView=${javaClass.name}")
+        Log.e("baseFragment", "onDestroyView=${javaClass.name}")
         super.onDestroyView()
     }
 
 
     open fun onBackPressed() {
-       requireActivity().onBackPressed()
+        requireActivity().onBackPressed()
     }
 }

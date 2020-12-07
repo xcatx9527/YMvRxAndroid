@@ -18,11 +18,9 @@
             android:id="@+id/dialog_item_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/while_bg"
             android:gravity="center_horizontal"
             android:padding="20dp"
             android:text="上传脚本"
-            android:textColor="@color/color_e0000000"
             android:textSize="16sp" />
 
         <View
@@ -34,11 +32,9 @@
             android:id="@+id/dialog_item_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/while_bg"
             android:gravity="center_horizontal"
             android:padding="20dp"
             android:text="上传脚本"
-            android:textColor="@color/color_e0000000"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -56,11 +52,9 @@
                 android:id="@+id/dialog_item_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/while_bg"
                 android:gravity="center_horizontal"
                 android:padding="20dp"
                 android:text="上传脚本"
-                android:textColor="@color/color_e0000000"
                 android:textSize="16sp" />
             <View
                 android:layout_width="match_parent"
@@ -71,11 +65,9 @@
                 android:id="@+id/dialog_item_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/while_bg"
                 android:gravity="center_horizontal"
                 android:padding="20dp"
                 android:text="上传脚本"
-                android:textColor="@color/color_e0000000"
                 android:textSize="16sp" />
             <View
                 android:layout_width="match_parent"
@@ -86,11 +78,9 @@
                 android:id="@+id/dialog_item_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/while_bg"
                 android:gravity="center_horizontal"
                 android:padding="20dp"
                 android:text="上传脚本"
-                android:textColor="@color/color_e0000000"
                 android:textSize="16sp" />
 
         </LinearLayout>

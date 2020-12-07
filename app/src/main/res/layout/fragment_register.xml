@@ -25,9 +25,8 @@
         android:orientation="vertical">
 
 
-        <include
-            layout="@layout/layout_comm_title"
-            />
+        <include layout="@layout/layout_comm_title" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,7 +50,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="48dp"
-                    android:background="@drawable/edit_shap"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -85,7 +83,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/edit_shap"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -120,7 +117,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/edit_shap"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -151,17 +147,14 @@
                         bind:checkChange="@{click.onCheckedChangeListener2}" />
                 </LinearLayout>
 
-                <TextView
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/registerSub"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/button_shap"
                     android:gravity="center"
                     android:onClick="@{()->click.register()}"
                     android:text="注册并登录"
-                    android:textColor="@color/white"
                     android:textSize="16dp" />
 
             </LinearLayout>

@@ -1,5 +1,6 @@
 package com.yzy.example.component.login
 
+import android.view.View
 import android.widget.CompoundButton
 import androidx.lifecycle.Observer
 import com.blankj.utilcode.util.KeyboardUtils
@@ -14,6 +15,10 @@ import com.yzy.example.utils.MMkvUtils
 
 class LoginFragment : CommFragment<LoginViewModel, FragmentLoginBinding>() {
     override fun getLayoutId(): Int = R.layout.fragment_login
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
+    }
+
     override fun initContentView() {
         binding.vm = viewModel
         binding.click = ProxyClick()
@@ -65,4 +70,5 @@ class LoginFragment : CommFragment<LoginViewModel, FragmentLoginBinding>() {
             }
 
     }
+
 }

@@ -1,125 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/linear_all"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/transparent"
-    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/transparent"
-        >
+        android:background="@color/transparent">
 
         <LinearLayout
             android:id="@+id/dialog_img_two_rel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/dialog_six_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/confirm"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:layout_width="0.5dp"
-                android:layout_height="@dimen/size_dp_2"
-                android:background="@color/color_dbdbdb">
+                android:layout_height="@dimen/dp_2">
 
             </TextView>
 
             <TextView
                 android:id="@+id/dialog_five_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/confirm"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:layout_width="0.5dp"
-                android:layout_height="@dimen/size_dp_2"
-                android:background="@color/color_dbdbdb">
-
-            </TextView>
+                android:layout_height="@dimen/dp_2" />
 
             <TextView
                 android:id="@+id/dialog_four_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/confirm"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:layout_width="0.5dp"
-                android:layout_height="@dimen/size_dp_2"
-                android:background="@color/color_dbdbdb"
-                ></TextView>
+                android:layout_height="@dimen/dp_2" />
 
             <TextView
                 android:id="@+id/dialog_one_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/confirm"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:layout_width="0.5dp"
-                android:layout_height="@dimen/size_dp_2"
-                android:background="@color/color_dbdbdb"
-                ></TextView>
+                android:layout_height="@dimen/dp_2" />
 
             <TextView
                 android:id="@+id/dialog_two_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/cancel"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:layout_width="0.5dp"
-                android:layout_height="@dimen/size_dp_2"
-                android:background="@color/color_dbdbdb"
-                ></TextView>
+                android:layout_height="@dimen/dp_2" />
 
             <TextView
                 android:id="@+id/dialog_three_button"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/size_dp_50"
+                android:layout_height="@dimen/dp_50"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/cancel"
-                android:textColor="@color/color_00a8ff"
-                android:textSize="@dimen/text_sp_18"
-                />
+                android:textSize="@dimen/sp_18" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

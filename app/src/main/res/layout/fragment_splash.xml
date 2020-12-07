@@ -2,51 +2,39 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data >
+
+    <data>
 
 
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:id="@+id/clRootView"
-    android:layout_height="match_parent"
-   >
-
-<!--    <ImageView-->
-<!--        android:contentDescription="@null"-->
-<!--        android:id="@+id/iv_sp"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:scaleType="centerCrop"-->
-<!--        android:src="@drawable/splash_bg"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <!--倒计时-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <!--倒计时-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.yzy.example.widget.RoundTextLayout
-            android:id="@+id/splashTime"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            app:qmui_backgroundColor="@color/style_Primary"
-            app:qmui_radius="1000dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            tools:text="3" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.yzy.example.widget.RoundTextLayout
+                android:id="@+id/splashTime"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:qmui_backgroundColor="@color/colorPrimary"
+                app:qmui_radius="1000dp"
+                tools:text="3" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/network_error_please_refresh"
-        android:textColor="@color/mA2A2A2"
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -31,13 +30,11 @@
 
     <Button
         android:id="@+id/btnNetWorkError"
-        android:layout_width="136dp"
-        android:layout_height="36dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_40"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/shape_status"
         android:text="@string/net_retry"
-        android:textColor="@android:color/white"
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

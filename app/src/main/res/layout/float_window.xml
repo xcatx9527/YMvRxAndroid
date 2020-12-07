@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/img_small_float"
-        android:layout_width="@dimen/size_dp_55"
-        android:layout_height="@dimen/size_dp_55"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55"
         android:layout_gravity="center_vertical"
         android:scaleType="centerCrop"
         android:src="@drawable/float_circle_open"/>
@@ -18,15 +18,15 @@
         android:src="@drawable/float_record_begin"
         android:layout_gravity="center_vertical"
         android:clickable="true"
-        android:layout_width="@dimen/size_dp_45"
-        android:layout_height="@dimen/size_dp_45"/>
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"/>
 
     <ImageView
         android:id="@+id/img_back_float"
         android:src="@drawable/float_back"
         android:layout_gravity="center_vertical"
-        android:layout_width="@dimen/size_dp_45"
-        android:layout_height="@dimen/size_dp_45"/>
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"/>
 
 
 </LinearLayout>

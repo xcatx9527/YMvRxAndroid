@@ -46,7 +46,6 @@ import com.xile.script.utils.script.CommandUtil
 import com.yzy.baselibrary.extention.nav
 import com.yzy.example.R
 import com.yzy.example.component.comm.CommFragment
-import com.yzy.example.component.dialog.initLoginDialog
 import com.yzy.example.component.home.HomeFragment
 import com.yzy.example.databinding.FragmentMainBinding
 import com.yzy.example.repository.model.MainViewModel
@@ -398,11 +397,11 @@ class MainFragment : CommFragment<MainViewModel, FragmentMainBinding>() {
                 viewModel.integral.postValue(it?.data?.coinCount)
             } else {
                 if (it.errCode == -1001) {
-                    initLoginDialog(childFragmentManager) {
+                  /*  initLoginDialog(childFragmentManager) {
                         mainToLogin = {
                             nav().navigate(MainFragmentDirections.loginFragment())
                         }
-                    }
+                    }*/
                 }
             }
         })
@@ -500,5 +499,9 @@ class MainFragment : CommFragment<MainViewModel, FragmentMainBinding>() {
     override fun onDestroy() {
         ScreenShotFb.getInstance(ScriptApplication.getInstance()).closeObject()
         super.onDestroy()
+    }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
     }
 }

@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.xile.script.adapter.FeaturesMenuAdapter;
 import com.xile.script.adapter.OnRecycleItemClicklistener;
 import com.xile.script.base.ScriptApplication;
-import com.xile.script.base.ui.view.TitleLayout;
 import com.xile.script.base.ui.view.floatview.RecordFloatView;
 import com.xile.script.bean.AppInfo;
 import com.xile.script.bean.FeatureInfo;
@@ -47,7 +46,6 @@ public class FunctionMenuActivity extends BaseFloatActivity implements View.OnCl
     private List<FeatureInfo> mFunctionList = new ArrayList<>();
     private List<FeatureInfo> mFunctionItemList = new ArrayList<>();
     private List<AppInfo> appInfos = new ArrayList<>();
-    private TitleLayout tl_title;
     private TextView tv_choose_function;
     private RecyclerView rcy_features;
     private Context mContext;
@@ -85,9 +83,6 @@ public class FunctionMenuActivity extends BaseFloatActivity implements View.OnCl
 
 
     public void initView() {
-        tl_title = this.findViewById(R.id.tl_tle);
-        tl_title.setTitle(mContext.getResources().getString(R.string.text_function_title));
-        tl_title.mBtnBack.setOnClickListener(this);
         tv_choose_function = this.findViewById(R.id.tv_choose_function);
         rcy_features = this.findViewById(R.id.rcy_features);
         rcy_features.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
